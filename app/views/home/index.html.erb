@@ -1,2 +1,16 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
+
+<div class="row">
+<% @product.each do |product| %>  
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <%= product.image %>
+      <div class="caption">
+        <h3><%= product.name %></h3>
+        <p><%= product.description %><%= product.price %></p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
